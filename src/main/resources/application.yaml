@@ -1,0 +1,18 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: "/manager" #设置基础路径，默认actuator
+  #设置监控端口
+  server:
+    port: 8181
+
+  endpoint:
+#    beans:
+#      enabled: false    # 关闭beans端点
+    health:
+      show-details: always  #显示健康信息细节
+spring:
+  redis:
+    host: localhost   #redis ip地址
